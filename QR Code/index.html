@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button class="nav-gen active">Generator</button>
+            <button class="nav-scan">Scanner</button>
+        </nav>
+
+        <div class="generator">
+            <h1>QR Code Generator</h1>
+            <p>Paste a url or enter text to create QR code</p>
+
+            <div class="generator-form">
+                <input type="text" placeholder="Enter text or url">
+                <button>Generate QR Code</button>
+            </div>
+
+            <div class="generator-image">
+                <img src="gen-image.png" alt="qr-code">
+            </div>
+            <div class="generator-btn">
+                <button class="btn-link">Download <i class="fa-solid fa-download"></i></button>
+            </div>
+        </div>
+
+        <div class="scanner" style="display: none;">
+            <h1>QR Code Scanner
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-circle-stop"></i>
+            </h1>
+            <form class="scanner-form">
+                <input type="file" accept="image/*" hidden>
+                <img src="gen-image.png" alt="qr-code">
+                <video></video>
+                <div class="content">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Upload QR Code from your Device to Scan</p>
+                </div>
+            </form>
+            
+            <div class="scanner-details">
+                <textarea disabled>Scan the QR code for result...</textarea>
+
+                <div class="btn">
+                    <button class="copy">Copy</button>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="instascan.min.js"></script>
+</body>
+</html>

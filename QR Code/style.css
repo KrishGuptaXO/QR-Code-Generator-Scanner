@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Share Tech", sans-serif;
+}
+body{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #335c67; */
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+.container{
+    width: 100%;
+    max-width: 410px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 15px 25px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #fff;
+}
+button{
+    border:none;
+    outline: none;
+    background: none;
+    cursor:pointer;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+nav button{
+    width: calc(100% / 2 - 5px);
+    font-size:1.2rem;
+    text-align: center;
+    height: 45px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ccc;
+    opacity:0.5;
+}
+nav button.active{
+    border-bottom: 2px solid #0283d8;
+    font-weight: 700;
+    color:#0283d8;
+    opacity: 1;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.generator{
+    overflow: hidden;
+    height: 215px;
+    transition: height 0.2s;
+}
+.generator.active{
+    height: 545px;
+}
+.generator h1{
+    font-size: 21px;
+}
+.generator p{
+    color: #555;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.generator-form{
+    margin: 20px 0;
+}
+.generator-form input{
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 18px;
+    padding: 0 15px;
+}
+.generator-form button{
+    width: 100%;
+    height: 55px;
+    background: #0283d8;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.generator-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 33px;
+    border: 2px dashed #555;
+    pointer-events: none;
+}
+.generator-image img{
+    width:200px;
+    height: 200px;
+}
+.generator-btn{
+    text-align: center;
+    margin-top: 10px;
+}
+.generator-btn .btn-link{
+    background: transparent;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding:10px 10px 10px 0;
+    transition: 0.4s;
+}
+.generator-btn .btn-link:hover{
+    padding: 10px;
+    background: rgba(36,113,255,0.1);
+}
+
+.scanner{
+    overflow: hidden;
+    height: 280px;
+    transition: 0.2s;
+}
+.scanner h1{
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.scanner h1 i{
+    font-size: x-large;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.scanner h1 .fa-camera{
+    color: #0283d8;
+}
+.scanner h1 .fa-circle-stop{
+    color: crimson;
+    display: none;
+}
+.scanner-form{
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px dashed #777;
+}
+.scanner-form img{
+    max-width: 180px;
+    display: none;
+}
+.scanner-form video{
+    width: 100%;
+    height:100%;
+    display: none;
+}
+.scanner-form .content{
+    color: #0283d8;
+}
+.scanner-form .content i{
+    font-size: 4rem;
+}
+.scanner-form .content p{
+ font-size: 1.2rem;
+ margin-top: 15px;   
+}
+.scanner-details{
+    margin-top: 15px;
+}
+.scanner-details textarea{
+    color: #333;
+    width: 100%;
+    height: 150px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    border-radius: 5px;
+}
+.scanner-details .btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.scanner-details .btn button{
+    height: 50px;
+    width: calc(100% / 2 - 10px);
+    background: #237eb6;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.scanner.active{
+    height: 530px;
+}.scanner.active .scanner-form{
+    pointer-events: none;
+}
+.scanner-form.active-img img{
+    display: block;
+}
+.scanner-form.active-img .content,
+.scanner-form.active-img video{
+    display: none;
+}
+.scanner-form.active-video video{
+    display: block;
+}
+.scanner-form.active-video .content,
+.scanner-form.active-video img{
+    display: none;
+}
+.pointerEvents{
+    pointer-events: none;
+}
